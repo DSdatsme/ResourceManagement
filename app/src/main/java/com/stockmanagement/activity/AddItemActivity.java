@@ -222,7 +222,7 @@ public class AddItemActivity extends BaseActivity {
                     String sr_no = edtSrno.getText().toString();
                     String desc = edtDis.getText().toString();
                     mydb.insertContact(thing, model_no, sr_no, desc);
-                    mydb_aAvailable.insertContact(spAddName.getItemAtPosition(spAddName.getSelectedItemPosition()).toString(), edtModelno.getText().toString(), edtSrno.getText().toString(), edtDis.getText().toString());
+                    mydb_aAvailable.insertContact(thing, model_no, sr_no, desc);
                     Intent intent = new Intent(activity, HomeActivity.class);
 
                     //Firebase

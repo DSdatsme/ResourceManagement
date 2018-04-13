@@ -27,15 +27,17 @@ import java.util.Map;
 public class AvailableFragment extends Fragment {
     final FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference ref = database.getReference();
+    DBHelper_Stock mydb;
+    DBHelper_Available mydb_aAvailable;
 
     private TextView tvAvailMonitor, tvAvailKeyboard, tvAvailMouse, tvAvailCpu,
             tvAvailMacMini, tvAvailUsb, tvAvailHeadPhones, tvAvailPrinter;
 
     private String TAG = "AvailableFragment";
-    DBHelper_Available mydb_aAvailable;
-
     int equipment_quantity[] = {0,0,0,0,0,0,0,0};
 String equipment[] = {"Monitor", "Keyboard", "Mouse", "CPU", "MacMini", "USB", "HeadPhones", "Printer"};
+    private TextView[] tvarray = new TextView[equipment.length];
+
     public AvailableFragment() {
         // Required empty public constructor
     }
@@ -58,20 +60,33 @@ String equipment[] = {"Monitor", "Keyboard", "Mouse", "CPU", "MacMini", "USB", "
             }
         };*/
 
-        ref.child("Available").child(equipment[1]).addValueEventListener(new ValueEventListener() {
+       /* ref.child("Available").child(equipment[1]).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                int value = dataSnapshot.child("Available").child("Keyboard").child("Keyboard").getValue(Integer.class);
-                Log.v("kugli","");
-                equipment_quantity[1] = mydb_aAvailable.getAllCotacts("Keyboard").size();
-                equipment_quantity[1] = value;
+                int value = dataSnapshot.child("Available").getValue(Integer.class);
+                Log.v("mLog",""+value);
+                //equipment_quantity[1] = mydb_aAvailable.getAllCotacts("Keyboard").size();
+                //equipment_quantity[1] = value;
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        });
+        });*/
+        ValueEventListener postListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                downStreamCode(dataSnapshot);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Getting Post failed, log a message
+            }
+        };
+        ref.addValueEventListener(postListener);
     }
 
     @Override
@@ -89,6 +104,17 @@ String equipment[] = {"Monitor", "Keyboard", "Mouse", "CPU", "MacMini", "USB", "
         tvAvailHeadPhones = (TextView) view.findViewById(R.id.tvAvailHeadPhones);
         tvAvailPrinter = (TextView) view.findViewById(R.id.tvAvailPrinter);
         mydb_aAvailable = new DBHelper_Available(getContext());
+        tvarray[0]= tvAvailMonitor;
+        tvarray[1]=tvAvailKeyboard;
+        tvarray[2]=tvAvailMouse;
+        tvarray[3]=tvAvailCpu;
+        tvarray[4]=tvAvailMacMini;
+        tvarray[5]=tvAvailUsb;
+        tvarray[6]=tvAvailHeadPhones;
+        tvarray[7]=tvAvailPrinter;
+
+
+
 
         if (mydb_aAvailable.getAll().size() != 0) {
             // int key = mydb.getAllCotacts("Keyboard").size();
@@ -216,7 +242,7 @@ String equipment[] = {"Monitor", "Keyboard", "Mouse", "CPU", "MacMini", "USB", "
 
  public void upStreamCode(){
         for(int i=0;i<equipment.length;i++){
-            DatabaseReference temp_ref = ref.child("Available").child(equipment[i]);
+            DatabaseReference temp_ref = ref.child("Available");
             Map<String,Object> taskMap = new HashMap<String,Object>();
             taskMap.put(equipment[i], equipment_quantity[i]);
             temp_ref.updateChildren(taskMap);
@@ -226,5 +252,19 @@ String equipment[] = {"Monitor", "Keyboard", "Mouse", "CPU", "MacMini", "USB", "
 
 
 
- }
+ }//end of upstream
+
+    public void downStreamCode(DataSnapshot dataSnapshot){
+
+        //int carid = dataSnapshot.child("Available").child("Keyboard").getValue(Integer.class);
+
+        for(int i=0;i<equipment.length;i++){
+            int temp = dataSnapshot.child("Available").child(equipment[i]).getValue(Integer.class);
+            tvarray[i].setText(""+temp);
+            Log.v("mLog",""+temp);
+
+
+
+        }
+    }
 }
