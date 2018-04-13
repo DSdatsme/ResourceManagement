@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name">ResourceUtiliser</string>
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="network_alert">We\'re having trouble reaching the network. Check your connection or try again in a few minutes.</string>
+    <string name="alert_email">Please enter email</string>
+    <string name="alert_valid_email">Please enter valid email id</string>
+    <string name="alert_password">Please enter password</string>
+    <string name="alert_password_length">Password must be at least 5 characters</string>
+    <string name="alert_language">Please select your language</string>
+    <string name="camera_permission">Please make sure to enable camera permission</string>
+    <string name="sure_to_logout">Are you sure you wan\'t to logout?</string>
+    <string name="alert_preference_null">Please register yourself.....</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="please_login">Please login to access the Application…</string>
+    <string name="sure_to_spy">Are you sure to start the ResourceUtiliser for extra security?…</string>
+    <string name="lets_spy">Start ResourceUtiliser from Device Administrators to activate the ResourceUtiliser…</string>
+    <string name="stop_to_spy">Are you sure to stop the ResourceUtiliser App?…</string>
+    <string name="lets_stop_spy">Stop ResourceUtiliser from Device Administrators to De-activate the ResourceUtiliser…</string>
+
+    <!--Login Screen-->
+    <string name="forgot_password">Forgot your Password?</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="language">Language</string>
+    <string name="share">Share</string>
+    <string name="share_text">Wowww.... Here\'s an awesome app ResourceUtiliser. Must take a look on it.....</string>
+    <string name="alert_password_mismatch">Entered password is incorrect. Please try again…</string>
+
+    <!--    Forget Password Screen-->
+    <string name="confirm">Confirm</string>
+    <string name="request_password_txt">You will receive the new password generated link
+            on your registered email address</string>
+    <string name="about_app">About App</string>
+
+    <!--    About App Screen-->
+    <string name="how_to_use">How to Use?</string>
+    <string name="abt_app_text">ResourceUtiliser App is designed for the purpose of your
+                know about your available resources. It will provide you the
+                knowldege of the current resources i.e., Available Resources,
+                Occupied Resources as well as Stock Resources. In this app,
+                we are able to add new items to Stock and transfer the items or
+                resources from one sector to another one for ex:-
+                we are able to transer any item from Available Resources to Stock Resources.
+                Resource Utiliser App is an app with great data storage and analysis as well as
+                provide info about our resouces…</string>
+
+    <!--    Profile Screen-->
+    <string name="register">Register</string>
+    <string name="update">Update</string>
+    <string name="alert_first_name">Please enter first name</string>
+    <string name="alert_last_name">Please enter last name</string>
+    <string name="alert_confirm_email">Please enter email</string>
+    <string name="alert_confirm_password">Please enter confirm password</string>
+    <string name="alert_phone_number">Please enter phone number</string>
+
+
+    <!--    Settings Screen-->
+    <string name="contacts">Available</string>
+    <string name="message">Occupied</string>
+    <string name="geo_status">Stock</string>
+
+    <!--    Profile Screen-->
+    <string name="firstname">Firstname</string>
+    <string name="lastname">LastName</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_number">Phone Number</string>
+
+    <!--IMAGE PICK OPTION-->
+    <string name="select_option">Select Option</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="select_images">Select images</string>
+    <string name="done">Done</string>
+
+    <!--    Transfer Items-->
+    <string-array name="departments">
+        <item>Development</item>
+        <item>Designing</item>
+        <item>SEO</item>
+        <item>Testing</item>
+        <item>BDE</item>
+        <item>HR</item>
+        <item>Artistic Work</item>
+        <item>Accounts</item>
+    </string-array>
+
+    <string-array name="items">
+        <item>Monitor</item>
+        <item>Keyboard</item>
+        <item>Mouse</item>
+        <item>CPU</item>
+        <item>Mac Mini</item>
+        <item>USB Cables</item>
+        <item>HeadPhones</item>
+        <item>Printer</item>
+    </string-array>
+
+    <string-array name="qty">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="tab_title">
+        <item>Available</item>
+        <item>Occupied</item>
+    </string-array>
+
+</resources>

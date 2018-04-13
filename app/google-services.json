@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "939126110738",
+    "firebase_url": "https://stockmanagement-final.firebaseio.com",
+    "project_id": "stockmanagement-final",
+    "storage_bucket": "stockmanagement-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939126110738:android:e53e236d6f2402e6",
+        "android_client_info": {
+          "package_name": "com.stockmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "939126110738-iovi3r1sg819ibisqiqnql5l36oqirm4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.stockmanagement",
+            "certificate_hash": "c1f3afd7a4317d5c2ac995c19d4c2bf80d43966e"
+          }
+        },
+        {
+          "client_id": "939126110738-ciquchj24e4lf2t7953i1il5spqhiqva.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUkHvI4On1ZoEfWOyjQuJcZgK0FtbUzz8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "939126110738-ciquchj24e4lf2t7953i1il5spqhiqva.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
